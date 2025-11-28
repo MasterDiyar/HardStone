@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://besn42oxc7oyj"]
+
+[sub_resource type="Gradient" id="Gradient_ydsyt"]
+colors = PackedColorArray(0.42365062, 0.42365065, 0.42365062, 1, 0.44291076, 0.44291076, 0.44291073, 0)
+
+[node name="dashParticle" type="CPUParticles2D"]
+emitting = false
+amount = 4
+one_shot = true
+explosiveness = 1.0
+emission_shape = 1
+emission_sphere_radius = 5.0
+direction = Vector2(0, 0)
+gravity = Vector2(0, -33)
+linear_accel_min = -2.0
+linear_accel_max = 2.0
+radial_accel_min = -20.0
+radial_accel_max = 20.0
+tangential_accel_min = 2.0
+tangential_accel_max = 2.0
+damping_max = 2.0
+angle_min = -20.0
+angle_max = 20.0
+scale_amount_max = 3.0
+color = Color(0.5609549, 0.5609549, 0.5609549, 1)
+color_ramp = SubResource("Gradient_ydsyt")

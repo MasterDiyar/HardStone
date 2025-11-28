@@ -1,0 +1,18 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="scripts\Entities\bosses\" />
+    <Folder Include="scripts\Entities\bullets\" />
+    <Folder Include="scripts\Entities\helpers\" />
+    <Folder Include="scripts\Entities\mobs\" />
+    <Folder Include="scripts\GameLoader\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="saves\save1\inventory.json" />
+    <Content Include="scripts\Items\itemid.txt" />
+  </ItemGroup>
+</Project>

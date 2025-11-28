@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxlydwot60ocj"]
+
+[ext_resource type="Texture2D" uid="uid://l55tvxubkkeh" path="res://assets/drawed/suit/lowlands/leather_u.png" id="1_vfwvi"]
+[ext_resource type="Script" uid="uid://biv7av7x5k8hn" path="res://scripts/Items/Suit/ChestPlate/Tunic.cs" id="2_tfw20"]
+
+[node name="tunic" type="Sprite2D"]
+texture_filter = 3
+texture = ExtResource("1_vfwvi")
+script = ExtResource("2_tfw20")
+Path = "res://assets/drawed/suit/lowlands/"
+SuitName = "leather"
