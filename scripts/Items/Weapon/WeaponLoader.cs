@@ -3,10 +3,17 @@ using Godot.Collections;
 
 namespace hardenedStone.scripts.Items.Weapon;
 
-public static class WeaponLoader
+public class WeaponLoader
 {
-    public static Dictionary<int, PackedScene> GetWeaponById = new Dictionary<int, PackedScene>()
+    public Dictionary<int, PackedScene> GetWeaponById = new Dictionary<int, PackedScene>()
     {
         {0, GD.Load<PackedScene>("")}
     };
+
+    public void LoadWeapons()
+    {
+        using var file = FileAccess.Open("res://scripts/Items", FileAccess.ModeFlags.Read);
+        file.GetAsText();
+        
+    }
 }

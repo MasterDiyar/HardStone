@@ -1,0 +1,109 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhhhev43nsg1j"]
+
+[ext_resource type="Script" uid="uid://de2i6k55wlubq" path="res://scripts/Items/CreateItem.cs" id="1_ascwo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_evcuf"]
+font_size = 32
+font_color = Color(1, 0, 0, 1)
+
+[node name="createItem" type="Control"]
+layout_mode = 3
+anchor_right = 0.532
+anchor_bottom = 0.47800002
+offset_right = 2.5599976
+offset_bottom = -4.23999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.8, 1.8)
+script = ExtResource("1_ascwo")
+
+[node name="FileDialog" type="FileDialog" parent="."]
+oversampling_override = 1.0
+title = "Open a File"
+position = Vector2i(0, 36)
+file_mode = 0
+filters = PackedStringArray("*.png", "*.jpeg", "*.jpg")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 360.0
+theme_override_constants/line_spacing = 12
+theme_override_font_sizes/font_size = 36
+text = "ID
+TYPE
+NAME
+TEXTURE PATH
+MAX COUNT
+DESCRIPTION"
+horizontal_alignment = 2
+
+[node name="LineEdit1" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_right = 870.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 32
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 60.0
+offset_right = 870.0
+offset_bottom = 120.0
+
+[node name="LineEdit3" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 120.0
+offset_right = 870.0
+offset_bottom = 180.0
+
+[node name="LineEdit4" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 180.0
+offset_right = 870.0
+offset_bottom = 240.0
+
+[node name="LineEdit5" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 240.0
+offset_right = 870.0
+offset_bottom = 300.0
+
+[node name="LineEdit6" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 300.0
+offset_right = 870.0
+offset_bottom = 360.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 375.0
+offset_right = 553.0
+offset_bottom = 450.0
+theme_override_font_sizes/font_size = 48
+text = "Create item"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 890.0
+offset_top = 180.0
+offset_right = 990.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 32
+text = "Find"
+
+[node name="ErrorText" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 570.5556
+offset_top = 394.44446
+offset_right = 734.5556
+offset_bottom = 439.44446
+text = " (!) Fatal error"
+label_settings = SubResource("LabelSettings_evcuf")
