@@ -45,7 +45,7 @@ public partial class InventoryUi : Control
 		for (var i = 0; i < inventory.Backpack.Length; i++)
 		{
 			if (inventory.Backpack[i] == null) continue;
-			var rect = _hotbar.GetNode<TextureRect>($"Slot{6 + i}");
+			var rect = _backpack.GetNode<TextureRect>($"Slot{6 + i}");
 			rect.Texture = inventory.Backpack[i].Texture;
 			if (inventory.Backpack[i].Count > 0)
 				rect.GetNode<Label>("Label").Text = inventory.Backpack[i].Count.ToString();
@@ -133,24 +133,26 @@ public partial class InventoryUi : Control
 		}
 	}
 
-	public bool TryToPut(Node mother, int slot, Texture2D texture)
+	public bool TryToPut(int from, int to)
 	{
 		
-		var rect = mother.GetNode<TextureRect>($"Slot{slot}");
-		if (rect.Texture != null)
-		{
-			if (slot < 5)
-			{
-				inventory.HotBar[slot] = new Item();
-				throw new NotImplementedException();
-			}
-			else if (slot > 15)
-				pickedSprite.Texture = texture;
-			var blankTexture = rect.Texture;
-			rect.Texture = texture;
-			pickedSprite.Texture = blankTexture;
-		}
+		
 
 		return true;
 	}
+
+	public TextureRect GetSlot(int slot) => slot switch
+		{
+			>= 0 and < 5 => _hotbar.GetNode<TextureRect>("Slot" + (slot + 1)),
+			>= 5 and < 15 => _backpack.GetNode<TextureRect>("Slot" + (slot + 1)),
+			>= 15 and < 18 => _suit.GetNode<TextureRect>("Slot" + (slot + 1)),
+			_ => _backpack.GetNode<TextureRect>("Slot" + (slot + 1)),
+		};
+
+	public Item GetItem(int slot) => slot switch
+	{
+		>= 0 and < 5 => inventory.HotBar[slot],
+		>= 5 and < 15 => inventory.HotBar[slot],
+	};
+
 }

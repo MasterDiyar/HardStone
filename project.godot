@@ -14,6 +14,10 @@ config/name="hardenedStone"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+ItemDB="*res://scenes/player/item_db.tscn"
+
 [display]
 
 window/size/viewport_width=1920

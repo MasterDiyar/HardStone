@@ -1,8 +1,8 @@
 [gd_scene load_steps=27 format=3 uid="uid://ceymu6khr46ag"]
 
-[ext_resource type="Script" uid="uid://cv1grtylt4kix" path="res://scripts/entities/player/Player.cs" id="1_lvxji"]
+[ext_resource type="Script" uid="uid://cv1grtylt4kix" path="res://scripts/Entities/player/Player.cs" id="1_lvxji"]
 [ext_resource type="Texture2D" uid="uid://sb1v7ahogxk0" path="res://assets/Assets/Prototype_Character/prototype_character.png" id="2_p47bc"]
-[ext_resource type="Script" uid="uid://ckfu32gs8bksu" path="res://scripts/entities/player/PlayerAnimation.cs" id="3_75vfm"]
+[ext_resource type="Script" uid="uid://ckfu32gs8bksu" path="res://scripts/Entities/player/PlayerAnimation.cs" id="3_75vfm"]
 [ext_resource type="PackedScene" uid="uid://bk6c67aocuc23" path="res://scenes/player/movement.tscn" id="4_0owmy"]
 [ext_resource type="PackedScene" uid="uid://cbpb1krgapakn" path="res://scenes/player/inventory.tscn" id="5_75vfm"]
 [ext_resource type="PackedScene" uid="uid://b4o67ibv5m5qd" path="res://scenes/ui/inventory_ui.tscn" id="6_75vfm"]
@@ -192,4 +192,5 @@ position = Vector2(0, 14)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="InventoryUI" parent="CanvasLayer" instance=ExtResource("6_75vfm")]
+[node name="InventoryUI" parent="CanvasLayer" node_paths=PackedStringArray("inventory") instance=ExtResource("6_75vfm")]
+inventory = NodePath("../../inventory")

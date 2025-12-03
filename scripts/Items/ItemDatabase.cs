@@ -9,6 +9,8 @@ namespace hardenedStone.scripts.Items;
 public partial class ItemDatabase : Node
 {
     Dictionary<string, ItemContainer> ItemContainers = new Dictionary<string, ItemContainer>();
+    
+    ItemUnpackager Unzip = new ItemUnpackager();
 
     public override void _Ready()
     {
@@ -32,12 +34,22 @@ public partial class ItemDatabase : Node
         };
 
         try {
+            GD.PrintErr("ItemDatabase: Loading from items.json");
             var itemList = JsonSerializer.Deserialize<List<ItemContainer>>(jText, option);
-
+            
             foreach (var item in itemList.Where(item => !ItemContainers.TryAdd(item.Id, item)))
                 GD.Print($"duplicate item {item.Id}");
         }catch (Exception e) {
             GD.PrintErr(e.Message);
         }
+    }
+
+    public Item GetItemById(string id)
+    {
+        if (ItemContainers.TryGetValue(id, out ItemContainer container))
+        {
+            return Unzip.GetItem(container);
+        }
+        throw new KeyNotFoundException($"Item with id {id} not found");
     }
 }

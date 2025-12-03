@@ -36,14 +36,14 @@ offset_left = 6.0
 offset_top = 6.0
 offset_right = 38.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="HotBar/Slot1"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -54,14 +54,14 @@ offset_left = 138.0
 offset_top = 6.0
 offset_right = 170.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="HotBar/Slot2"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -72,14 +72,14 @@ offset_left = 270.0
 offset_top = 6.0
 offset_right = 302.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="HotBar/Slot3"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -90,14 +90,14 @@ offset_left = 402.0
 offset_top = 6.0
 offset_right = 434.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="HotBar/Slot4"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -108,14 +108,14 @@ offset_left = 534.0
 offset_top = 6.0
 offset_right = 566.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="HotBar/Slot5"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -146,14 +146,14 @@ offset_left = 6.0
 offset_top = 6.0
 offset_right = 38.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot6"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -164,14 +164,14 @@ offset_left = 138.0
 offset_top = 6.0
 offset_right = 170.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot7"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -182,14 +182,14 @@ offset_left = 270.0
 offset_top = 6.0
 offset_right = 302.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot8"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -200,14 +200,14 @@ offset_left = 402.0
 offset_top = 6.0
 offset_right = 434.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot9"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -218,14 +218,14 @@ offset_left = 534.0
 offset_top = 6.0
 offset_right = 566.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot10"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -236,14 +236,14 @@ offset_left = 6.0
 offset_top = 138.0
 offset_right = 38.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot11"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -254,14 +254,14 @@ offset_left = 138.0
 offset_top = 138.0
 offset_right = 170.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot12"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -272,14 +272,14 @@ offset_left = 270.0
 offset_top = 138.0
 offset_right = 302.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot13"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -290,14 +290,14 @@ offset_left = 402.0
 offset_top = 138.0
 offset_right = 434.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot14"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -308,14 +308,14 @@ offset_left = 534.0
 offset_top = 138.0
 offset_right = 566.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="BackPack/Slot15"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -338,14 +338,14 @@ offset_left = 6.0
 offset_top = 6.0
 offset_right = 38.0
 offset_bottom = 38.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="Suit/Slot16"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -356,14 +356,14 @@ offset_left = 6.0
 offset_top = 138.0
 offset_right = 38.0
 offset_bottom = 170.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="Suit/Slot17"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
@@ -374,14 +374,14 @@ offset_left = 6.0
 offset_top = 270.0
 offset_right = 38.0
 offset_bottom = 302.0
-scale = Vector2(4, 4)
+scale = Vector2(2, 2)
 
 [node name="Label" type="Label" parent="Suit/Slot18"]
 layout_mode = 0
-offset_left = 13.0
-offset_top = 20.0
-offset_right = 86.0
-offset_bottom = 65.0
+offset_left = 45.0
+offset_top = 52.0
+offset_right = 118.0
+offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c86pqnpx1mu6s"]
+
+[ext_resource type="Script" uid="uid://ch0tnjnt781nq" path="res://scripts/Items/ItemDatabase.cs" id="1_njxhh"]
+
+[node name="ItemDB" type="Node"]
+script = ExtResource("1_njxhh")

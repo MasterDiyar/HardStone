@@ -24,11 +24,19 @@ public partial class Inventory : Node2D
 
     public Action OnSuitChange;
 
+    private ItemDatabase ItemDB;
+
     public override void _Ready()
     {
-        chest = new Tunic();
-        pants = new Breeches();
-        helmet = new Ushanka();
+        ItemDB = GetNode<ItemDatabase>("/root/ItemDB");
+        
+        chest = (ChestPlate)ItemDB.GetItemById("leather_tunic");
+        pants = (Breeches)ItemDB.GetItemById("breeches");
+        helmet = (Ushanka)ItemDB.GetItemById("ushanka");
+        
+        Backpack[5] = chest;
+        Backpack[0] = helmet;
+        Backpack[1] = pants;
         
         
         OnSuitChange += MergeSuit;

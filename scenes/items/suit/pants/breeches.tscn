@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccxcy4yy1lik0"]
+
+[ext_resource type="Script" uid="uid://bglbthrdedblw" path="res://scripts/Items/Suit/Pants/Breeches.cs" id="1_kjwjs"]
+
+[node name="Breeches" type="Sprite2D"]
+script = ExtResource("1_kjwjs")
