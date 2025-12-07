@@ -385,3 +385,8 @@ offset_bottom = 97.0
 scale = Vector2(0.25, 0.25)
 label_settings = SubResource("LabelSettings_drsq2")
 horizontal_alignment = 2
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(631, 940, 761, 940, 761, 1070, 631, 1070)
+closed = true
+width = 3.0

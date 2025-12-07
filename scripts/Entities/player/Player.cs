@@ -17,9 +17,6 @@ public partial class Player : Entity
 			Movement();
 		else
 			OnMove?.Invoke(false, LastState);
-		
-		if (Input.IsActionPressed("lm"))
-			GD.Print("LM: ", GetGlobalMousePosition());
 	}
 
 	void Movement()

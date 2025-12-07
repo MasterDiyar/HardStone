@@ -34,7 +34,7 @@ public partial class ItemDatabase : Node
         };
 
         try {
-            GD.PrintErr("ItemDatabase: Loading from items.json");
+            GD.Print("ItemDatabase: Loading from items.json");
             var itemList = JsonSerializer.Deserialize<List<ItemContainer>>(jText, option);
             
             foreach (var item in itemList.Where(item => !ItemContainers.TryAdd(item.Id, item)))

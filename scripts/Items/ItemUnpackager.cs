@@ -21,8 +21,10 @@ public class ItemUnpackager
                 GetDefaultItem(container)
         };
         item.Name = container.Name;
+        item.ID = container.Id;
         item.Texture = GD.Load<Texture2D>("res://"+container.TexturePath);
         item.MaxCount = container.MaxCount;
+        item.Count = 1;
         
         return item;
     }

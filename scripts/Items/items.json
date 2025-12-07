@@ -12,7 +12,7 @@
         "type": "helmet",
         "name": "ushanka",
         "texture": "assets/drawed/suit/lowlands/ushanka.png",
-        "max_count": 1,
+        "max_count": 3,
         "description": "Someone wants gondonka more than this"
     },
     {

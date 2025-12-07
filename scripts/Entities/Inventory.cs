@@ -30,14 +30,10 @@ public partial class Inventory : Node2D
     {
         ItemDB = GetNode<ItemDatabase>("/root/ItemDB");
         
-        chest = (ChestPlate)ItemDB.GetItemById("leather_tunic");
-        pants = (Breeches)ItemDB.GetItemById("breeches");
-        helmet = (Ushanka)ItemDB.GetItemById("ushanka");
-        
-        Backpack[5] = chest;
-        Backpack[0] = helmet;
-        Backpack[1] = pants;
-        
+        Backpack[5] = ItemDB.GetItemById("leather_tunic");
+        Backpack[1] = ItemDB.GetItemById("ushanka");
+        Backpack[0] = ItemDB.GetItemById("ushanka");
+        Backpack[2] = ItemDB.GetItemById("breeches");
         
         OnSuitChange += MergeSuit;
         OnSuitChange?.Invoke();
@@ -46,15 +42,26 @@ public partial class Inventory : Node2D
     
     public void MergeSuit()
     {
-        mergedSuit = new BaseSuit();
-        
-        
-        mergedSuit.Armor = chest.Armor + helmet.Armor + pants.Armor;
-        mergedSuit.Immunity = chest.Immunity
-            .Union(helmet.Immunity)
-            .Union(pants.Immunity)
-            .ToArray();
-        mergedSuit.HalfImmunity = chest.HalfImmunity.Union(helmet.HalfImmunity).Union(pants.HalfImmunity).ToArray();
+        mergedSuit = new BaseSuit
+        {
+            Armor =
+                (chest?.Armor  ?? 0) +
+                (helmet?.Armor ?? 0) +
+                (pants?.Armor  ?? 0),
+
+            Immunity =
+                (chest?.Immunity  ?? [])
+                .Union(helmet?.Immunity ?? [])
+                .Union(pants?.Immunity  ?? [])
+                .ToArray(),
+
+            HalfImmunity =
+                (chest?.HalfImmunity  ?? [])
+                .Union(helmet?.HalfImmunity ?? [])
+                .Union(pants?.HalfImmunity  ?? [])
+                .ToArray(),
+        };
+
     }
     
     public float ParseDamage(float damage, Modifier modifier)
