@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://jvaianfs5bnq"]
+
+[ext_resource type="Script" uid="uid://15ifhr0fuu14" path="res://scripts/Items/ThrowedItem.cs" id="1_88bii"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rmama"]
+radius = 16.0
+
+[node name="ThrowedItem" type="Area2D"]
+script = ExtResource("1_88bii")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rmama")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)

@@ -39,6 +39,7 @@ public partial class ItemDatabase : Node
             
             foreach (var item in itemList.Where(item => !ItemContainers.TryAdd(item.Id, item)))
                 GD.Print($"duplicate item {item.Id}");
+            GD.Print(ItemContainers.Count, " items loaded");
         }catch (Exception e) {
             GD.PrintErr(e.Message);
         }
@@ -47,9 +48,8 @@ public partial class ItemDatabase : Node
     public Item GetItemById(string id)
     {
         if (ItemContainers.TryGetValue(id, out ItemContainer container))
-        {
             return Unzip.GetItem(container);
-        }
+        
         throw new KeyNotFoundException($"Item with id {id} not found");
     }
 }

@@ -22,18 +22,13 @@ public partial class Inventory : Node2D
     public Item[] HotBar = new Item[5];
     public Item[] Backpack = new Item[10];
 
-    public Action OnSuitChange;
+    public Action OnSuitChange, OnItemAdded, OnItemRemoved;
 
     private ItemDatabase ItemDB;
 
     public override void _Ready()
     {
         ItemDB = GetNode<ItemDatabase>("/root/ItemDB");
-        
-        Backpack[5] = ItemDB.GetItemById("leather_tunic");
-        Backpack[1] = ItemDB.GetItemById("ushanka");
-        Backpack[0] = ItemDB.GetItemById("ushanka");
-        Backpack[2] = ItemDB.GetItemById("breeches");
         
         OnSuitChange += MergeSuit;
         OnSuitChange?.Invoke();
@@ -63,6 +58,65 @@ public partial class Inventory : Node2D
         };
 
     }
+
+    public bool AddItem(Item item)
+    {
+        item = item.Clone();
+        // 1. stack in hotbar
+        if (TryStack(item, HotBar)) {
+            OnItemAdded?.Invoke();
+            return true;
+        }
+        // 2. stack in backpack
+        if (TryStack(item, Backpack)) {
+            OnItemAdded?.Invoke();
+            return true;
+        }
+        // 3. empty slot in hotbar
+        if (TryPlace(item, HotBar)) {
+            OnItemAdded?.Invoke();
+            return true;
+        }
+        // 4. empty slot in backpack
+        if (TryPlace(item, Backpack)) {
+            OnItemAdded?.Invoke();
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool TryStack(Item item, Item[] array)
+    {
+        for (int i = 0; i < array.Length; i++) {
+            if (array[i] == null) continue;
+            if (array[i].ID != item.ID) continue;
+            int space = array[i].MaxCount - array[i].Count;
+            if (space <= 0) continue;
+            
+            int toAdd = Math.Min(space, item.Count);
+
+            array[i].Count += toAdd;
+            item.Count -= toAdd;
+
+            if (item.Count <= 0)
+                return true;
+        }
+        return false;
+    }
+
+    private bool TryPlace(Item item, Item[] array)
+    {
+        for (int i = 0; i < array.Length; i++) {
+            if (array[i] == null) {
+                array[i] = item;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     
     public float ParseDamage(float damage, Modifier modifier)
     {

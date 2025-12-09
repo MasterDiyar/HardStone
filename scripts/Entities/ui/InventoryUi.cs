@@ -31,6 +31,9 @@ public partial class InventoryUi : Control
 		_hotbar.ItemClicked += HotBarOnItemClicked;
 		_suit.ItemClicked += SuitOnItemClicked;
 
+		inventory.OnItemAdded += LoadTextures;
+		inventory.OnItemRemoved += LoadTextures;
+
 		LoadTextures();
 	}
 

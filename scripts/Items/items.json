@@ -22,5 +22,37 @@
         "texture": "assets/drawed/suit/lowlands/breeches.png",
         "max_count": 1,
         "description": "Shtani za 10 griven"
+    },
+    {
+        "id": "poplar_log",
+        "type": "material",
+        "name": "Poplar log",
+        "texture": "assets/drawed/resources/log.png",
+        "max_count": 999,
+        "description": "Most common and popUlar tree"
+    },
+    {
+        "id": "iron_ingot",
+        "type": "material",
+        "name": "Iron ingot",
+        "texture": "assets/drawed/resources/iron.png",
+        "max_count": 999,
+        "description": "Best iron of lowlands"
+    },
+    {
+        "id": "bronze_ingot",
+        "type": "material",
+        "name": "Bronze ingot",
+        "texture": "assets/drawed/resources/bronze.png",
+        "max_count": 999,
+        "description": "Ancestral ingot, basic material"
+    },
+    {
+        "id": "leather",
+        "type": "material",
+        "name": "Leather",
+        "texture": "assets/drawed/resources/leather.png",
+        "max_count": 999,
+        "description": "Given from almost all mob"
     }
 ]

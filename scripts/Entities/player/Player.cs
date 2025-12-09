@@ -3,10 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using hardenedStone.scripts.entities;
+using hardenedStone.scripts.Items;
 using hardenedStone.scripts.Miscellaneous;
 
 public partial class Player : Entity
 {
+	public override void _Ready()
+	{
+		Inventory = GetNode<Inventory>("inventory");
+	}
+
 	public override void _Process(double delta)
 	{
 		if (Input.IsActionPressed("lm"))
@@ -33,4 +39,8 @@ public partial class Player : Entity
 		
 		OnMove?.Invoke(true, LastState);
 	}
+
+	public bool AddItem(Item item) =>
+		Inventory.AddItem(item);
+
 }

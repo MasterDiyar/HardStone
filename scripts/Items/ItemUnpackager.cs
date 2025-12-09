@@ -17,6 +17,8 @@ public class ItemUnpackager
                 GetHelmet(container),
             "pants" =>
                 GetPants(container),
+            "material" =>
+                GetMaterial(container),
             _ =>
                 GetDefaultItem(container)
         };
@@ -50,5 +52,8 @@ public class ItemUnpackager
         "ushanka" => GD.Load<PackedScene>("res://scenes/items/suit/helmet/ushanka.tscn").Instantiate<Ushanka>(),
         _ => GD.Load<PackedScene>("res://scenes/items/suit/helmet/ushanka.tscn").Instantiate<Helmet>(),
     };
+    
+    public static Material GetMaterial(ItemContainer container) => 
+        GD.Load<PackedScene>("res://scenes/items/material.tscn").Instantiate<Material>();
 
 }
