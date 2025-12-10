@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxidsft7epk6s"]
+
+[ext_resource type="Script" uid="uid://dkwmnafxrh07p" path="res://scripts/Entities/consumables/Consumable.cs" id="1_rdfx3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4levx"]
+
+[node name="ore" type="StaticBody2D" node_paths=PackedStringArray("texture")]
+script = ExtResource("1_rdfx3")
+texture = NodePath("Sprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4levx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
