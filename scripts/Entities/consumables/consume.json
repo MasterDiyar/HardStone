@@ -1,9 +1,9 @@
 [
   {
     "id" : "poplar_tree",
-    "texture": "res://assets/tiles/Texture/TX Plant.png",
+    "texture": "res://assets/drawed/resources/poplar",
     "name" : "Poplar tree",
-    "type" : "wooden",
+    "type" : "tree",
     "drop" : ["poplar_log"],
     "count" : [2],
     "chance": [0.9],
@@ -11,10 +11,11 @@
   },
   {
     "id" : "iron_ore",
+    "texture": "res://assets/drawed/resources/iron_ore",
     "name" : "Iron ore",
-    "type" : "stony",
+    "type" : "ore",
     "drop" : ["iron_ingot"],
-    "count" : [2],
+    "count" : [2],  
     "chance": [0.9],
     "hp" : 80
   }

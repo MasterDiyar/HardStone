@@ -97,14 +97,21 @@ public partial class InventoryUi : Control
 	{
 		if (IsBackPackOpen) 
 			if (_backpack.Position.Y < 650)
+			{
 				_backpack.Position += Vector2.Up * Accel * (float)delta;
-			else
+				_suit.Position += Vector2.Up * Accel * (float)delta;
+			}else {
 				_backpack.Position = new Vector2(626, 650);
+				_suit.Position = new Vector2(1310, 650);
+			}
 		else
-			if (_backpack.Position.Y > 1100)
+			if (_backpack.Position.Y > 1100) {
 				_backpack.Position += Vector2.Down * Accel * (float)delta;
-			else
+				_suit.Position += Vector2.Down * Accel * (float)delta;
+			}else {
 				_backpack.Position = new Vector2(626, 1100);
+				_suit.Position = new Vector2(1310, 1100);
+			}
 		Accel -= 100*(float)delta;
 
 		if (Input.IsActionJustPressed("e")) {

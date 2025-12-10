@@ -9,8 +9,8 @@ namespace hardenedStone.scripts.Items;
 
 public partial class ItemDatabase : Node
 {
-    Dictionary<string, ItemContainer> ItemContainers = new Dictionary<string, ItemContainer>();
-    Dictionary<string, ConsumeContainer> ConsumeContainers = new Dictionary<string, ConsumeContainer>();
+    public Dictionary<string, ItemContainer> ItemContainers = new Dictionary<string, ItemContainer>();
+    public Dictionary<string, ConsumeContainer> ConsumeContainers = new Dictionary<string, ConsumeContainer>();
     
     
     ItemUnpackager Unzip = new ItemUnpackager();
