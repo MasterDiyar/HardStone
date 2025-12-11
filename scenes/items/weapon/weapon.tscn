@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfrbqu2omfs3t"]
+
+[ext_resource type="Shader" uid="uid://bvifgejj8qvm3" path="res://scripts/Items/Weapon/prefab.gdshader" id="1_6mkq6"]
+[ext_resource type="Script" uid="uid://81iaudp8bdnb" path="res://scripts/Items/Weapon/Weapon.cs" id="2_72vws"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ysw2c"]
+shader = ExtResource("1_6mkq6")
+
+[node name="Weapon" type="Sprite2D"]
+material = SubResource("ShaderMaterial_ysw2c")
+script = ExtResource("2_72vws")
