@@ -3,6 +3,7 @@ using System;
 using hardenedStone.scripts.entities;
 using hardenedStone.scripts.entities.bullets;
 using hardenedStone.scripts.Items;
+using hardenedStone.scripts.Items.Weapon.WeaponDetails;
 using hardenedStone.scripts.Modifiers;
 
 public partial class Weapon : Sprite2D

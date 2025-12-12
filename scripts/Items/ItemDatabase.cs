@@ -1,8 +1,10 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using Godot;
+using hardenedStone.scripts.entities.bullets;
 using hardenedStone.scripts.entities.consumables;
 
 namespace hardenedStone.scripts.Items;
@@ -11,21 +13,27 @@ public partial class ItemDatabase : Node
 {
     public Dictionary<string, ItemContainer> ItemContainers = new Dictionary<string, ItemContainer>();
     public Dictionary<string, ConsumeContainer> ConsumeContainers = new Dictionary<string, ConsumeContainer>();
-    
+    public Dictionary<string, BulletContainer> BulletContainers = new Dictionary<string, BulletContainer>();
+    public 
     
     ItemUnpackager Unzip = new ItemUnpackager();
     ConsumeLoader Loader = new ConsumeLoader();
 
     public override void _Ready()
     {
-        LoadItems("res://scripts/Items/items.json");
-        LoadConsumables("res://scripts/Entities/consumables/consume.json");
+        LoadJsonList("res://scripts/Items/items.json", ItemContainers, "Items");
+        LoadJsonList("res://scripts/Entities/consumables/consume.json", ConsumeContainers, "Consume");
+        LoadJsonList("res://scripts/Entities/bullets/bullet.json", BulletContainers, "Bullet");
+        
     }
 
-    public void LoadItems(string path)
+    private void LoadJsonList<TContainer>(string path,
+        Dictionary<string, TContainer> targetDictionary,
+        string debugKey = "{not given}")
+        where TContainer : IContainer
     {
         if (!FileAccess.FileExists(path)) {
-           GD.PrintErr("ItemDatabase: File not found: " + path);
+           GD.PrintErr(debugKey+": File not found: " + path);
            return;
         }
 
@@ -39,40 +47,15 @@ public partial class ItemDatabase : Node
         };
 
         try {
-            GD.Print("ItemDatabase: Loading from items.json");
-            var itemList = JsonSerializer.Deserialize<List<ItemContainer>>(jText, option);
+            GD.Print(debugKey+": Loading from items.json");
+            var list = JsonSerializer.Deserialize<List<TContainer>>(jText, option);
             
-            foreach (var item in itemList.Where(item => !ItemContainers.TryAdd(item.Id, item)))
-                GD.Print($"duplicate item {item.Id}");
-            GD.Print(ItemContainers.Count, " items loaded");
+            foreach (var item in list.Where(i => !targetDictionary.TryAdd(i.Id, i)))
+                GD.Print($"{debugKey}: duplicate item {item.Id}");        
+            GD.Print($"{targetDictionary.Count} {debugKey.ToLower()} loaded");
         }catch (Exception e) {
-            GD.PrintErr(e.Message);
+            GD.PrintErr($"{debugKey}: {e.Message}");
         }
-    }
-
-    public void LoadConsumables(string path)
-    {
-        if (!FileAccess.FileExists(path)) {
-            GD.PrintErr("ItemDatabase: File not found: " + path);
-            return;
-        }
-        
-        using var file = FileAccess.Open(path, FileAccess.ModeFlags.Read);
-        string jText = file.GetAsText();
-
-        var option = new JsonSerializerOptions()
-        {
-            PropertyNameCaseInsensitive = true,
-            ReadCommentHandling = JsonCommentHandling.Skip
-        };
-
-        try {
-            GD.Print("ItemDatabase: Loading from consumables.json");
-            var consumableList = JsonSerializer.Deserialize<List<ConsumeContainer>>(jText, option);
-            foreach (var item in consumableList.Where(item => !ConsumeContainers.TryAdd(item.Id, item)))
-                GD.Print($"duplicate consumable {item.Id}");
-            GD.Print(ConsumeContainers.Count, " consumables loaded");
-        } catch (Exception e) { GD.PrintErr(e.Message); }
     }
 
     public Item GetItemById(string id)

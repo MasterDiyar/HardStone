@@ -1,8 +1,9 @@
 using System.Text.Json.Serialization;
+using hardenedStone.scripts.Items;
 
 namespace hardenedStone.scripts.entities.consumables;
 
-public class ConsumeContainer
+public class ConsumeContainer : IContainer
 {
     [JsonPropertyName("id")]      public string   Id        { get; set; }
     [JsonPropertyName("texture")] public string   Texture   { get; set; }

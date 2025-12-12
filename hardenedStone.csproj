@@ -6,12 +6,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="scripts\Entities\bosses\" />
+    <Folder Include="scripts\Entities\bullets\swing\" />
     <Folder Include="scripts\Entities\helpers\" />
     <Folder Include="scripts\Entities\mobs\" />
     <Folder Include="scripts\GameLoader\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="saves\save1\inventory.json" />
+    <Content Include="scripts\Entities\bullets\bullet.json" />
     <Content Include="scripts\Entities\consumables\consume.json" />
     <Content Include="scripts\Items\itemid.txt" />
     <Content Include="scripts\Items\items.json" />

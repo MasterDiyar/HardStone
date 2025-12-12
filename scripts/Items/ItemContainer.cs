@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 
 namespace hardenedStone.scripts.Items;
 
-public class ItemContainer
+public class ItemContainer: IContainer
 {
     [JsonPropertyName("id")] public string Id { get; set; }
     [JsonPropertyName("type")] public string Type { get; set; }

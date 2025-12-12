@@ -1,0 +1,13 @@
+[
+  {
+    "id" : "wooden_swing",
+    "speed" : 200,
+    "base_damage" : 1,
+    "splitting" : 0,
+    "splitPath" : "null",
+    "fly_type" : "static",
+    "other" : []
+  }
+  
+  
+]

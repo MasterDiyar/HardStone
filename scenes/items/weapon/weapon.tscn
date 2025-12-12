@@ -5,6 +5,13 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ysw2c"]
 shader = ExtResource("1_6mkq6")
+shader_parameter/color32 = Color(1, 1, 1, 1)
+shader_parameter/color48 = Color(1, 1, 1, 1)
+shader_parameter/color64 = Color(1, 1, 1, 1)
+shader_parameter/color128 = Color(1, 1, 1, 1)
+shader_parameter/color160 = Color(1, 1, 1, 1)
+shader_parameter/color192 = Color(1, 1, 1, 1)
+shader_parameter/threshold = 0.003
 
 [node name="Weapon" type="Sprite2D"]
 material = SubResource("ShaderMaterial_ysw2c")

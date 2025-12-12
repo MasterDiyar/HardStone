@@ -1,11 +1,11 @@
 shader_type canvas_item;
 
-uniform vec4 color32 : hint_color = vec4(1.0);
-uniform vec4 color48 : hint_color = vec4(1.0);
-uniform vec4 color64 : hint_color = vec4(1.0);
-uniform vec4 color128 : hint_color = vec4(1.0);
-uniform vec4 color160 : hint_color = vec4(1.0);
-uniform vec4 color192 : hint_color = vec4(1.0);
+uniform vec4 color32 : source_color = vec4(1.0);
+uniform vec4 color48 : source_color = vec4(1.0);
+uniform vec4 color64 : source_color = vec4(1.0);
+uniform vec4 color128 : source_color = vec4(1.0);
+uniform vec4 color160 : source_color = vec4(1.0);
+uniform vec4 color192 : source_color = vec4(1.0);
 
 uniform float threshold = 0.003; // допуск для сравнения оттенков
 
