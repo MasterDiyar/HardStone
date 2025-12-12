@@ -1,15 +1,30 @@
 using Godot;
 using System;
+using hardenedStone.scripts.entities;
+using hardenedStone.scripts.entities.bullets;
+using hardenedStone.scripts.Items;
+using hardenedStone.scripts.Modifiers;
 
 public partial class Weapon : Sprite2D
 {
-	// Called when the node enters the scene tree for the first time.
+	protected Item[] Consumers;
+	protected PackedScene[] bullets;
+	protected Modifier Modifiers;
+	protected Entity Master;
 	public override void _Ready()
 	{
+		Master = GetParent<Entity>();
+		Master.OnAttack += OnAttack;
 	}
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	protected virtual void OnAttack()
+	{
+		
+	}
+
 	public override void _Process(double delta)
 	{
 	}
+	
+	
 }

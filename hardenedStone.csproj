@@ -6,7 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="scripts\Entities\bosses\" />
-    <Folder Include="scripts\Entities\bullets\" />
     <Folder Include="scripts\Entities\helpers\" />
     <Folder Include="scripts\Entities\mobs\" />
     <Folder Include="scripts\GameLoader\" />
