@@ -54,5 +54,13 @@
         "texture": "assets/drawed/resources/leather.png",
         "max_count": 999,
         "description": "Given from almost all mob"
+    },
+    {
+        "id": "wooden_sword",
+        "type": "weapon",
+        "name": "Wooden Sword",
+        "texture": "assets/drawed/weapon/lowlands/wooden_sword.png",
+        "max_count": 1,
+        "description": "Given from almost all mob"
     }
 ]

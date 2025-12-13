@@ -10,7 +10,7 @@ public class ItemUnpackager
 {
     public Item GetItem(ItemContainer container)
     {
-        Item item = container.Type switch
+        var item = container.Type switch
         {
             "chestplate" =>
                 GetChestPlate(container),

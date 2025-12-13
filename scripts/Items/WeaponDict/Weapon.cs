@@ -34,9 +34,18 @@ public partial class Weapon : Item
 	{
 	}
 
+	private static Weapon ItemConverter(Item item) => new() {
+			ID = item.ID,
+			Texture = item.Texture,
+			Name = item.Name,
+			MaxCount = item.MaxCount,
+			Count = item.Count
+		};
+	
+
 	public static Weapon CreateWeapon(Item item, WeaponContainer container)
 	{
-		Weapon weapon = (Weapon)item;
+		Weapon weapon = ItemConverter(item);
 		weapon.AttackSpeed = container.AttackSpeed;
 		weapon.Colors = [new Color(container.Colors[0], container.Colors[1], container.Colors[2]),
 		                 new Color(container.Colors[3], container.Colors[4], container.Colors[5]),];

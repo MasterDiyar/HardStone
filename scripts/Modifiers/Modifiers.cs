@@ -34,6 +34,6 @@ public static class Modifiers
 
     public static Modifier GetFromName(string modifierName)
     {
-        return ModifierDict[modifierName];
+        return ModifierDict[modifierName.ToLower()];
     }
 }

@@ -13,6 +13,12 @@ public partial class BaseSuit : Item
     
     public virtual string[] HalfImmunity { get; set; } = ["None"];
 
-    
+    public static BaseSuit GetSuit(BaseSuit suit, SuitContainer sContainer)
+    {
+        suit.Armor = sContainer.Armor;
+        suit.Immunity = sContainer.Immunity;
+        suit.HalfImmunity = sContainer.HalfImmunity;
+        return suit;
+    }
    
 }

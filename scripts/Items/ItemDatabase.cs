@@ -6,6 +6,7 @@ using System.Text.Json;
 using Godot;
 using hardenedStone.scripts.entities.bullets;
 using hardenedStone.scripts.entities.consumables;
+using hardenedStone.scripts.Items.Suit;
 using hardenedStone.scripts.Items.WeaponDict;
 
 namespace hardenedStone.scripts.Items;
@@ -16,6 +17,7 @@ public partial class ItemDatabase : Node
     public Dictionary<string, ConsumeContainer> ConsumeContainers = new Dictionary<string, ConsumeContainer>();
     public Dictionary<string, BulletContainer> BulletContainers = new Dictionary<string, BulletContainer>();
     public Dictionary<string, WeaponContainer> WeaponContainers = new Dictionary<string, WeaponContainer>();
+    public Dictionary<string, SuitContainer> SuitContainers = new Dictionary<string, SuitContainer>();
     
     ItemUnpackager Unzip = new ItemUnpackager();
     ConsumeLoader Loader = new ConsumeLoader();
@@ -25,7 +27,8 @@ public partial class ItemDatabase : Node
         LoadJsonList("res://scripts/Items/items.json", ItemContainers, "Items");
         LoadJsonList("res://scripts/Entities/consumables/consume.json", ConsumeContainers, "Consume");
         LoadJsonList("res://scripts/Entities/bullets/bullet.json", BulletContainers, "Bullet");
-        LoadJsonList("res://scripts/Items/Weapon/weapons.json", WeaponContainers, "Weapons");
+        LoadJsonList("res://scripts/Items/WeaponDict/weapons.json", WeaponContainers, "Weapons");
+        LoadJsonList("res://scripts/Items/Suit/suits.json", SuitContainers, "Suits");
     }
 
     private void LoadJsonList<TContainer>(string path,
@@ -82,5 +85,16 @@ public partial class ItemDatabase : Node
         if (WeaponContainers.ContainsKey(id))
             throw new KeyNotFoundException($"Item with id {id} not found");
         throw new KeyNotFoundException($"Weapon with id {id} not found");
+    }
+
+    public BaseSuit GetSuitById(string id)
+    {
+        if (SuitContainers.TryGetValue(id, out var value) &&
+            ItemContainers.ContainsKey(id))
+            return BaseSuit.GetSuit((BaseSuit)GetItemById(id), value);
+        
+        if (SuitContainers.ContainsKey(id))
+            throw new KeyNotFoundException($"Item with id {id} not found");
+        throw new KeyNotFoundException($"Suit with id {id} not found");
     }
 }

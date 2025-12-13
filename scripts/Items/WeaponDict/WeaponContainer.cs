@@ -12,4 +12,4 @@ public class WeaponContainer : IContainer
     [JsonPropertyName("bullets")]      public string[] BulletPath   { get; set; }
     [JsonPropertyName("modifiers")]    public string[] Modifiers    { get; set; }
     [JsonPropertyName("animations")]   public string[] Animations   { get; set; }
-}
+} 

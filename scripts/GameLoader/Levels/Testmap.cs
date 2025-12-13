@@ -25,5 +25,9 @@ public partial class Testmap : Node2D
 		pots.PreLoad(ItemDB.GetItemById("poplar_log"));
 		pots.Position = Vector2.One * 256;
 		AddChild(pots);
+		pots = GD.Load<PackedScene>("res://scenes/items/throwed_item.tscn").Instantiate<ThrowedItem>();
+		pots.PreLoad(ItemDB.GetWeaponById("wooden_sword"));
+		pots.Position = Vector2.One * 128+ Vector2.Down * 128;
+		AddChild(pots);
 	}
 }
