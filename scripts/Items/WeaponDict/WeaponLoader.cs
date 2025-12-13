@@ -1,7 +1,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace hardenedStone.scripts.Items.Weapon;
+namespace hardenedStone.scripts.Items.WeaponDict;
 
 public class WeaponLoader
 {

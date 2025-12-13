@@ -2,6 +2,7 @@ using Godot;
 using hardenedStone.scripts.Items.Suit.ChestPlate;
 using hardenedStone.scripts.Items.Suit.Helmet;
 using hardenedStone.scripts.Items.Suit.Pants;
+using hardenedStone.scripts.Items.WeaponDict;
 
 namespace hardenedStone.scripts.Items;
 
@@ -56,4 +57,10 @@ public class ItemUnpackager
     public static Material GetMaterial(ItemContainer container) => 
         GD.Load<PackedScene>("res://scenes/items/material.tscn").Instantiate<Material>();
 
+
+    public WeaponDict.Weapon GetWeapon(WeaponContainer id, ItemContainer container)
+    {
+        var wep = GetItem(container);
+        return WeaponDict.Weapon.CreateWeapon(wep, id);
+    }
 }

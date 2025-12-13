@@ -18,6 +18,7 @@
     <Content Include="scripts\Items\itemid.txt" />
     <Content Include="scripts\Items\items.json" />
     <Content Include="scripts\Items\jsonmaker.py" />
+    <Content Include="scripts\Items\WeaponDict\weapons.json" />
     <Content Include="TODO LIST.MD" />
   </ItemGroup>
 </Project>

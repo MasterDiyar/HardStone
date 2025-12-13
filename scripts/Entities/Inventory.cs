@@ -122,7 +122,7 @@ public partial class Inventory : Node2D
     {
         if (mergedSuit.Immunity.Contains(modifier.Name))
             return 0;
-        return  (mergedSuit.HalfImmunity.Contains(modifier.Name)) ? damage/2 : damage;
+        return ((mergedSuit.HalfImmunity.Contains(modifier.Name)) ? damage / 2 : damage)*modifier.DamageModifier;
     }
     
     

@@ -39,9 +39,18 @@ public partial class Entity : CharacterBody2D
     {
         float totalDamage=0;
         foreach (var mod in modifiers)
-            totalDamage+=Inventory.ParseDamage(damage, mod);
-        totalDamage += Mathf.Clamp(damage - Inventory.mergedSuit.Armor, 0, damage);
+        {
+            mod.Apply(this);
+            totalDamage += Inventory.ParseDamage(mod.RawDamage, mod);
+        }
+        totalDamage += Mathf.Clamp(damage - Inventory.mergedSuit.Armor, 1, damage);
         Hp -= totalDamage;
+        OnHurt?.Invoke();
+    }
+
+    public virtual void TakeRawDamage(float damage)
+    {
+        Hp -= damage;
         OnHurt?.Invoke();
     }
 }

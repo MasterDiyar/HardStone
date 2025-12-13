@@ -1,0 +1,12 @@
+[
+  {
+    "id": "wooden_sword",
+    "attack_speed": 1.6,
+    "damage": 6,
+    "colors": [0,0,0,0,0,0],
+    "consume": [0],
+    "bullets": ["wooden_swing"],
+    "modifiers": ["Wooden", "Cold_weapon", "Sharp"],
+    "animations": ["swing", "poke"]
+  }
+]
