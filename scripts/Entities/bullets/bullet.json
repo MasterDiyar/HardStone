@@ -5,8 +5,8 @@
     "base_damage" : 1,
     "splitting" : 0,
     "splitPath" : "null",
-    "fly_type" : "static",
-    "other" : []
+    "fly_type" : "basic:1",
+    "other" : [1, 1]
   }
   
   

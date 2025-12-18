@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbe3sdcq17jl3"]
+
+[ext_resource type="Script" uid="uid://cbq5lrnlxum1u" path="res://scripts/Entities/bullets/bulletUpgrades/StraightFly.cs" id="1_vswe4"]
+
+[node name="straight_fly" type="Node2D"]
+script = ExtResource("1_vswe4")
